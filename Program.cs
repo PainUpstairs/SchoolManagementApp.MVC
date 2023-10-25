@@ -31,3 +31,8 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
+// dotnet ef dbcontext scaffold "Server=localhost, 1433; Database=SchoolManagementDb;Trusted_Connection=false;MultipleActiveResultSets=false;Encrypt=false;user id=sa;password=123456a@" Microsoft.EntityFrameworkCore.SqlServer -o Data -f --no-onconfiguring
+
+// dotnet aspnet-codegenerator controller -name EnrollmentsController -m Enrollment -dc SchoolManagementDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries -f 
